@@ -1,0 +1,26 @@
+{
+    "name": "ob/campaign",
+    "description": "Email campaigns business domain models",
+    "homepage": "https://github.com/marcaube/Campaign",
+    "keywords": ["email", "newsletter", "campaigns", "mail"],
+
+    "license": "MIT",
+    "type": "library",
+
+    "authors": [
+        {
+            "name": "Marc Aubé",
+            "homepage": "http://marcaube.ca"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.3"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}
