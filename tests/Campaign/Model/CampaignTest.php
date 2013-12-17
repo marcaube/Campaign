@@ -19,6 +19,8 @@ class CampaignTest extends \PHPUnit_Framework_TestCase
             $this->campaign->getStatus(),
             Campaign::STATUS_DRAFT
         );
+
+        $this->assertTrue($this->campaign->isDraft());
     }
 
     public function test_status_is_planned()
@@ -29,5 +31,21 @@ class CampaignTest extends \PHPUnit_Framework_TestCase
             $this->campaign->getStatus(),
             Campaign::STATUS_PLANNED
         );
+
+        $this->assertTrue($this->campaign->isPlanned());
+    }
+
+    public function test_status_is_sending()
+    {
+        $this->campaign->setStatus(Campaign::STATUS_SENDING);
+
+        $this->assertTrue($this->campaign->isSending());
+    }
+
+    public function test_status_is_sent()
+    {
+        $this->campaign->setStatus(Campaign::STATUS_SENT);
+
+        $this->assertTrue($this->campaign->isSent());
     }
 }

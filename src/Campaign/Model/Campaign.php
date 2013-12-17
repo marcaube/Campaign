@@ -72,4 +72,44 @@ class Campaign
     {
         return $this->status;
     }
+
+    /**
+     * Is it a draft?
+     *
+     * @return bool
+     */
+    public function isDraft()
+    {
+        return $this->status == self::STATUS_DRAFT;
+    }
+
+    /**
+     * Is the campaign planned for sending?
+     *
+     * @return bool
+     */
+    public function isPlanned()
+    {
+        return $this->status == self::STATUS_PLANNED;
+    }
+
+    /**
+     * Is the campaign in the process of being sent?
+     *
+     * @return bool
+     */
+    public function isSending()
+    {
+        return $this->status == self::STATUS_SENDING;
+    }
+
+    /**
+     * Has it been sent?
+     *
+     * @return bool
+     */
+    public function isSent()
+    {
+        return $this->status == self::STATUS_SENT;
+    }
 }
