@@ -39,6 +39,12 @@ class Campaign
      */
     protected $date;
 
+    /**
+     * @param string $title
+     * @param string $body
+     * @param Email  $from
+     * @param Email  $reply
+     */
     public function __construct($title, $body, Email $from, Email $reply = null)
     {
         $this->title = $title;
@@ -50,19 +56,27 @@ class Campaign
 
     /**
      * @param \DateTime $date
+     *
+     * @return Campaign
      */
     public function plan(\DateTime $date)
     {
         $this->date = $date;
         $this->status = self::STATUS_PLANNED;
+
+        return $this;
     }
 
     /**
      * @param int $status
+     *
+     * @return Campaign
      */
     public function setStatus($status)
     {
         $this->status = $status;
+
+        return $this;
     }
 
     /**
