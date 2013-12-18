@@ -40,4 +40,37 @@ class ContactListTest extends \PHPUnit_Framework_TestCase
             $this->list2->getParent()
         );
     }
+
+    public function test_you_can_set_columns()
+    {
+        $columns = array('name', 'age group', 'city', 'favorite color');
+
+        $this->list->setColumns($columns);
+
+        $this->assertEquals(
+            $columns,
+            $this->list->getColumns()
+        );
+    }
+
+    public function test_you_can_add_columns()
+    {
+        $columns = array('A', 'B', 'C');
+        $expectedResult = array('A', 'B', 'C', 'D');
+
+        $this->list->setColumns($columns);
+        $this->list->addColumn('D');
+
+        $this->assertEquals(
+            $expectedResult,
+            $this->list->getColumns()
+        );
+
+        $this->list->addColumn('A');
+
+        $this->assertEquals(
+            $expectedResult,
+            $this->list->getColumns()
+        );
+    }
 }
