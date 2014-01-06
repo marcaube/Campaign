@@ -17,8 +17,7 @@
     "require": {
         "php": ">=5.3",
         "guzzle/guzzle": "~3.7",
-        "knplabs/knp-snappy": "*",
-        "h4cc/wkhtmltoimage-amd64": "0.11.0-RC1"
+        "knplabs/knp-snappy": "*"
     },
 
     "require-dev": {

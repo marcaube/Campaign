@@ -11,9 +11,19 @@ class Snapshot
      */
     private $folder;
 
-    public function __construct($folder = null)
+    /**
+     * @var string
+     */
+    private $binaryPath;
+
+    /**
+     * @param null   $folder     The folder where to save the image
+     * @param string $binaryPath The path to the wkhtmltoimage binary
+     */
+    public function __construct($folder = null, $binaryPath = '/usr/local/bin/wkhtmltoimage')
     {
         $this->folder = $folder;
+        $this->binaryPath = $binaryPath;
     }
 
     /**
@@ -28,10 +38,11 @@ class Snapshot
             $fileName = uniqid() . '.jpg';
         }
 
-        $snappy = new Image(__DIR__ . '/../../../vendor/h4cc/wkhtmltoimage-amd64/bin/wkhtmltoimage-amd64');
+        $filePath = $this->folder . $fileName;
 
-        $snappy->generateFromHtml($html, $this->folder . $fileName);
+        $snappy = new Image($this->binaryPath);
+        $snappy->generateFromHtml($html, $filePath);
 
-        return $fileName;
+        return $filePath;
     }
 }
