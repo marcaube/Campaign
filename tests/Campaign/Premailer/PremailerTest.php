@@ -6,6 +6,12 @@ class PremailerTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
+        if (!isset($_ENV['RUN_API_TEST']) || !$_ENV['RUN_API_TEST']) {
+            $this->markTestSkipped(
+                'Skipping external API tests'
+            );
+        }
+
         $this->premailer = new Premailer();
     }
 

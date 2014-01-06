@@ -28,4 +28,8 @@
             <!--</exclude>-->
         </whitelist>
     </filter>
+
+    <php>
+        <env name="RUN_API_TEST" value="0" />
+    </php>
 </phpunit>
