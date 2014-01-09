@@ -7,13 +7,20 @@ class Template
     /**
      * @var string
      */
+    protected $name;
+
+    /**
+     * @var string
+     */
     protected $code;
 
     /**
+     * @param string $name
      * @param string $code
      */
-    public function __construct($code)
+    public function __construct($name, $code)
     {
+        $this->name = $name;
         $this->code = $code;
     }
 
