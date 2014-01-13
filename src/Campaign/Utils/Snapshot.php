@@ -41,8 +41,9 @@ class Snapshot
         $filePath = $this->folder . $fileName;
 
         $snappy = new Image($this->binaryPath);
+        $snappy->setTimeout(0);
         $snappy->generateFromHtml($html, $filePath);
 
-        return $filePath;
+        return $fileName;
     }
 }
