@@ -6,10 +6,10 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->template1 = new Template("<b>Bold template</b>");
-        $this->template2 = new Template("<b>Bold template</b>");
-        $this->template3 = new Template("<em>Campaign with emphasis</em>");
-        $this->template4 = new Template("<em>Campaign with emphasis</em>");
+        $this->template1 = new Template("template1", "<b>Bold template</b>");
+        $this->template2 = new Template("template2", "<b>Bold template</b>");
+        $this->template3 = new Template("template3", "<em>Campaign with emphasis</em>");
+        $this->template4 = new Template("template4", "<em>Campaign with emphasis</em>");
     }
 
     public function test_different_instances_are_equal()

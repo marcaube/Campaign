@@ -20,6 +20,6 @@ class SnapshotTest extends \PHPUnit_Framework_TestCase
 
         $file = $snappy->render($html);
 
-        $this->assertFileExists($file);
+        $this->assertFileExists('/tmp/' . $file);
     }
 }
