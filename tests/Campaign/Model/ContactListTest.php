@@ -10,7 +10,7 @@ class ContactListTest extends \PHPUnit_Framework_TestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->list = new ContactList();
+        $this->list  = new ContactList();
         $this->list2 = new ContactList();
     }
 
@@ -55,7 +55,7 @@ class ContactListTest extends \PHPUnit_Framework_TestCase
 
     public function test_you_can_add_columns()
     {
-        $columns = array('A', 'B', 'C');
+        $columns        = array('A', 'B', 'C');
         $expectedResult = array('A', 'B', 'C', 'D');
 
         $this->list->setColumns($columns);

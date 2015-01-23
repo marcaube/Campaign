@@ -21,7 +21,7 @@ class Email
     public function __construct($email, $name = null)
     {
         $this->email = $email;
-        $this->name = $name;
+        $this->name  = $name;
     }
 
     /**

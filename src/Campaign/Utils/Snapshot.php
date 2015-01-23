@@ -22,7 +22,7 @@ class Snapshot
      */
     public function __construct($folder = null, $binaryPath = '/usr/local/bin/wkhtmltoimage')
     {
-        $this->folder = $folder;
+        $this->folder     = $folder;
         $this->binaryPath = $binaryPath;
     }
 

@@ -51,7 +51,7 @@ class Contact
     public function getColumn($name)
     {
         if (!array_key_exists($name, $this->columns)) {
-            return null;
+            return;
         }
 
         return $this->columns[$name];

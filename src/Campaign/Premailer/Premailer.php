@@ -19,7 +19,7 @@ class Premailer implements PremailerInterface
     {
         $client = new Client(self::API_URL);
 
-        $request = $client->post(null, null, array('html' => $html));
+        $request  = $client->post(null, null, array('html' => $html));
         $response = $request->send();
 
         return $this->getHtml($response);
@@ -35,9 +35,9 @@ class Premailer implements PremailerInterface
     private function getHtml($response)
     {
         $data = $response->json();
-        $url = $data["documents"]["html"];
+        $url  = $data["documents"]["html"];
 
-        $client = new Client($url);
+        $client   = new Client($url);
         $response = $client->get()->send();
 
         return $response->getBody();

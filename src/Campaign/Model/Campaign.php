@@ -47,11 +47,11 @@ class Campaign
      */
     public function __construct($title, $body, Email $from, Email $reply = null)
     {
-        $this->title = $title;
-        $this->body = $body;
-        $this->from = $from;
+        $this->title        = $title;
+        $this->body         = $body;
+        $this->from         = $from;
         $this->replyToEmail = $reply;
-        $this->status = self::STATUS_DRAFT;
+        $this->status       = self::STATUS_DRAFT;
     }
 
     /**
@@ -61,7 +61,7 @@ class Campaign
      */
     public function plan(\DateTime $date)
     {
-        $this->date = $date;
+        $this->date   = $date;
         $this->status = self::STATUS_PLANNED;
 
         return $this;
