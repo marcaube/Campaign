@@ -1,5 +1,7 @@
 <?php
 
+namespace Campaign\Tests\Utils;
+
 use Campaign\Utils\Snapshot;
 
 class SnapshotTest extends \PHPUnit_Framework_TestCase

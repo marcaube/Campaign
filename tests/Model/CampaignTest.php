@@ -1,5 +1,7 @@
 <?php
 
+namespace Campaign\Tests\Model;
+
 use Campaign\Model\Campaign;
 
 class CampaignTest extends \PHPUnit_Framework_TestCase
@@ -25,7 +27,7 @@ class CampaignTest extends \PHPUnit_Framework_TestCase
 
     public function test_status_is_planned()
     {
-        $this->campaign->plan(new DateTime());
+        $this->campaign->plan(new \DateTime());
 
         $this->assertEquals(
             $this->campaign->getStatus(),

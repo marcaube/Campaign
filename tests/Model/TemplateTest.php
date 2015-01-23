@@ -1,5 +1,7 @@
 <?php
 
+namespace Campaign\Tests\Model;
+
 use Campaign\Model\Template;
 
 class TemplateTest extends \PHPUnit_Framework_TestCase

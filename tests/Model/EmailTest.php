@@ -1,5 +1,7 @@
 <?php
 
+namespace Campaign\Tests\Model;
+
 use Campaign\Model\Email;
 
 class EmailTest extends \PHPUnit_Framework_TestCase

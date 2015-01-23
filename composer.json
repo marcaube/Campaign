@@ -25,9 +25,11 @@
     },
 
     "autoload": {
-        "psr-4": {
-            "Campaign\\": "src/"
-        }
+        "psr-4": { "Campaign\\": "src/"}
+    },
+
+    "autoload-dev": {
+        "psr-4": { "Campaign\\Tests\\": "tests/" }
     },
 
     "extra": {

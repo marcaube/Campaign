@@ -1,5 +1,7 @@
 <?php
 
+namespace Campaign\Tests\Model;
+
 use Campaign\Model\ContactList;
 
 class ContactListTest extends \PHPUnit_Framework_TestCase

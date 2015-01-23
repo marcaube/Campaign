@@ -1,5 +1,7 @@
 <?php
 
+namespace Campaign\Tests\Premailer;
+
 use Campaign\Premailer\Premailer;
 
 class PremailerTest extends \PHPUnit_Framework_TestCase
